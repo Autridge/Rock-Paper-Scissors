@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jaro", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  background-image: linear-gradient(
+    to left top,
+    rgba(rgb(65, 70, 232), 0.8),
+    rgba(rgb(2, 67, 2), 0.8)
+  );
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+  }
+}
+
+button {
+  cursor: pointer;
+
+  @include respond(phone) {
+    font-size: 2.3rem;
+  }
+}
+
+.victory {
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-style: italic;
+  background-image: linear-gradient(
+    to right,
+    rgba(rgb(30, 180, 221), 0.8),
+    rgba(rgb(32, 206, 151), 0.8)
+  );
+  color: rgb(11, 18, 97);
+  position: relative;
+  margin-top: -10%;
+
+  @include respond(tab-land) {
+    margin-top: -25rem;
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    position: absolute;
+    width: 100%;
+    margin-top: -53rem;
+  }
+}
+
+.hidden {
+  display: none;
+}

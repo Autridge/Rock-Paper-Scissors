@@ -1,0 +1,30 @@
+.jungle-computer {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(green, 0.8),
+      rgba(rgb(2, 67, 2), 0.8)
+    ),
+    url(../images/jungle.jpg);
+  background-size: cover;
+  background-position: top;
+  --mask: conic-gradient(
+      from -135deg at right,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg
+    )
+    50%/100% 60px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+
+  &--heading {
+    @include heading;
+  }
+
+  &--image {
+    @include image-style;
+  }
+  @include respond(tab-land) {
+    mask: none;
+  }
+}

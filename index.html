@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <title>Rock-Paper-Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jungle-computer">
+        <div class="jungle-computer--heading">Computer</div>
+        <img
+          src="images/scissors.png"
+          alt="scissors"
+          class="jungle-computer--image hi"
+        />
+      </div>
+      <div class="city-player">
+        <h1 class="city-player--heading">You</h1>
+        <img src="images/rock.png" alt="rock" class="city-player--image" />
+        <div class="city-player--choices">
+          <button class="city-player--choice" data-choice="rock">Rock</button>
+          <button class="city-player--choice" data-choice="paper">Paper</button>
+          <button class="city-player--choice" data-choice="scissors">
+            Scissors
+          </button>
+        </div>
+        <button class="city-player--restart">Restart</button>
+      </div>
+    </div>
+    <p class="victory hidden">WIN</p>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+.city-player {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(rgb(65, 70, 232), 0.8),
+      rgba(rgb(11, 18, 97), 0.8)
+    ),
+    url(../images/city.jpg);
+  background-size: cover;
+  background-position: center;
+  --mask: conic-gradient(
+      from 45deg at left,
+      #0000,
+      #000 1deg 89deg,
+      #0000 90deg
+    )
+    50%/100% 60px;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+
+  &--heading {
+    @include heading;
+  }
+
+  &--image {
+    @include image-style;
+  }
+
+  &--choices,
+  &--restart {
+    display: flex;
+    flex-direction: column;
+    margin-left: 78%;
+    width: 20%;
+    gap: 3px;
+
+    @include respond(tab-land) {
+      margin-left: 25%;
+      margin-top: 4rem;
+      width: 50%;
+    }
+
+    @include respond(phone) {
+      border-radius: 3px;
+    }
+  }
+
+  &--restart {
+    margin-top: 5%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #faebd7;
+    color: #faebd7;
+    border-radius: 0.7rem;
+    transition: all 0.3s ease-in;
+
+    @include respond(phone) {
+      margin-top: 2%;
+    }
+  }
+
+  &--restart:hover {
+    background-color: #faebd7;
+    color: #000;
+    transform: translateY(2px);
+
+    @include respond(phone) {
+      background-color: transparent;
+      color: #faebd7;
+    }
+  }
+
+  @include respond(tab-land) {
+    mask: none;
+  }
+  @include respond(phone) {
+    padding-bottom: 3rem;
+  }
+}
